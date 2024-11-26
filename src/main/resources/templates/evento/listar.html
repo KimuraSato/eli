@@ -1,0 +1,20 @@
+<a href="/evento/criar">Adicionar Evento</a>
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Responsavel</th>
+        <th>Email</th>
+    </tr>
+    <tr th:each="tarefa : ${listaEventosNoFront}">
+        <td th:text="${tarefa.nome}"></td>
+        <td th:text="${tarefa.responsavel}"></td>
+        <td th:text="${tarefa.email}"></td>
+        <td>
+            <a th:href="@{/evento/alterar/{id}(id=${tarefa.id})}">Alterar</a>
+        </td>
+        <td>
+            <a th:href="@{/evento/alterar/{id}(id=${tarefa.id})}">Delete</a>
+        </td>
+    </tr>
+</table>
