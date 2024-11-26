@@ -5,11 +5,15 @@
         <th>Nome</th>
         <th>Responsavel</th>
         <th>Email</th>
+        <th>Valor</th>
+        <th>Descricao</th>
     </tr>
     <tr th:each="tarefa : ${listaEventosNoFront}">
         <td th:text="${tarefa.nome}"></td>
         <td th:text="${tarefa.responsavel}"></td>
         <td th:text="${tarefa.email}"></td>
+        <td th:text="${tarefa.valor}"></td>
+        <td th:text="${tarefa.descricao}"></td>
         <td>
             <a th:href="@{/evento/alterar/{id}(id=${tarefa.id})}">Alterar</a>
         </td>
