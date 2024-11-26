@@ -55,4 +55,13 @@ public class GtController {
         
         return "redirect:/gt";
     }
+
+    @GetMapping("/gt/deletar/{id}")
+    public String deletar(@PathVariable Long id, Model model){
+        Gt gt;
+        gt = er.findById(id).orElseThrow();
+        er.deleteById(id);
+
+        return "gt/deletar";
+    }
 }

@@ -15,10 +15,10 @@
         <td th:text="${tarefa.valor}"></td>
         <td th:text="${tarefa.descricao}"></td>
         <td>
-            <a th:href="@{/evento/alterar/{id}(id=${tarefa.id})}">Alterar</a>
+            <a th:href="@{/evento/gt/alterar/{id}(id=${tarefa.id})}">Alterar</a>
         </td>
         <td>
-            <a th:href="@{/evento/alterar/{id}(id=${tarefa.id})}">Delete</a>
+            <a th:href="@{/evento/gt/deletar/{id}(id=${tarefa.id})}">Delete</a>
         </td>
     </tr>
 </table>
